@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        var cardStyle = {
+        width:"300px",
+        textAlign:"center",
+        padding:"20px",
+        boxShadow: "0 0 10px black"
+        }
+        var btn1Style ={
+            borderRadius: "15%",
+            width: "100px",
+            margin: "10px",
+            height: "40px",
+            color: "white",
+            fontWeight: "bold",
+            backgroundColor: "#bf00ff",
+        }
+        var btn2Style ={
+            borderRadius: "15%",
+            width: "100px",
+            margin: "10px",
+            height: "40px",
+            color: "white",
+            fontWeight: "bold",
+            backgroundColor: "#e600ac",
+        }
+        
+        var imgStyle = {
+            borderRadius: "50%",
+            width:"200px",
+            height:"200px",
+            // objectFit: "cover",
+        }
+        var p1= {
+            display: "flex",
+            justifyContent:"center",
+            justifyContent:"space-evenly",
+            color:"gray",
+            fontWeight:"bold",
+        }
+
+    function createCard(){
+        return <div style={cardStyle}>
+            <img style={imgStyle}
+         src="https://th.bing.com/th/id/OIP.AIreG9FfdaeHsvZFsju1DAHaLH?pid=ImgDet&rs=1"/>
+         <h2>Alexandra Caulea</h2>
+         <p>I enjoy drinkink a cup of coffee every day</p>
+         <div style={p1}>
+         <p>172<br/>POSTS</p>
+         <p>47<br/>FOLLOWERS</p>
+         <p>20<br/>FOLLOWING</p></div>
+         <button style={btn1Style}>FOLLOW</button>
+         <button style={btn2Style}>MESSAGE</button>
+            </div>
+    }
+
+    var container = <div style={{display:"flex", justifyContent:"space-evenly"}}>
+        {createCard()}
+        </div>
+    ReactDOM.render(container,document.getElementById('root'))  
+    </script>
+</body>
+</html>
